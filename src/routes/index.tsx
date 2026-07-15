@@ -484,15 +484,15 @@ function ArgosDashboard() {
           <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold">Digital Twin · Warehouse Stack</h2>
+                <h2 className="text-base font-semibold">Digital Twin · Pilha do Armazém</h2>
                 <p className="text-xs text-muted-foreground">
-                  Live view of 7 vertical floors · Front row is closest to the loading bay.
+                  Visão ao vivo dos 7 andares verticais · Fileira da frente é a mais próxima da doca.
                 </p>
               </div>
               <div className="flex items-center gap-3 text-[11px]">
-                <LegendDot color="var(--danger)" label="IMO zone" />
-                <LegendDot color="var(--primary)" label="Heavy load" />
-                <LegendDot color="var(--teal)" label="Standard" />
+                <LegendDot color="var(--danger)" label="Zona IMO" />
+                <LegendDot color="var(--primary)" label="Carga pesada" />
+                <LegendDot color="var(--teal)" label="Padrão" />
               </div>
             </div>
 
