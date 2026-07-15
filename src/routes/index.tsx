@@ -118,7 +118,7 @@ function ArgosDashboard() {
       setHighlightFloor(floorNum);
     } catch (err) {
       console.error(err);
-      setError("Could not reach the allocation service. Please retry.");
+      setError("Não foi possível acessar o serviço de alocação. Tente novamente.");
     } finally {
       setLoading(false);
     }
