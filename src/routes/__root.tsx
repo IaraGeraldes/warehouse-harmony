@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Painel Digital Twin do armazém de 7 andares da Wilson Sons: alocação inteligente de contêineres, monitoramento de ocupação e zoneamento de segurança IMO.",
       },
       { name: "author", content: "Wilson Sons" },
-      { property: "og:title", content: "Projeto Argos — Otimizador de Armazém" },
+      { property: "og:title", content: "Projeto Argos — Otimizador de Armazém Wilson Sons" },
       {
         property: "og:description",
         content:
@@ -93,6 +93,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Projeto Argos — Otimizador de Armazém Wilson Sons" },
+      { name: "twitter:description", content: "Painel Digital Twin do armazém de 7 andares da Wilson Sons: alocação inteligente de contêineres, monitoramento de ocupação e zoneamento de segurança IMO." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3f1cc423-59b6-4c9a-a1eb-399383cd67e6/id-preview-8e69b976--a14a89c1-25b8-495d-8d6f-d480819bcdec.lovable.app-1784147504036.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3f1cc423-59b6-4c9a-a1eb-399383cd67e6/id-preview-8e69b976--a14a89c1-25b8-495d-8d6f-d480819bcdec.lovable.app-1784147504036.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
