@@ -681,13 +681,13 @@ function FloorRow({
           {/* Container slots — front / back */}
           <div className="mt-3 grid grid-cols-2 gap-2">
             <SlotRow
-              title="Front"
+              title="Frente"
               containers={floor.containers.filter((c) => c.front)}
               accent={accent}
               highlighted={highlighted && recommendationPosition === "Front"}
             />
             <SlotRow
-              title="Back"
+              title="Fundo"
               containers={floor.containers.filter((c) => !c.front)}
               accent={accent}
               highlighted={highlighted && recommendationPosition === "Back"}
