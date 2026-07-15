@@ -172,14 +172,14 @@ function ArgosDashboard() {
                 Wilson Sons · Digital Twin
               </div>
               <h1 className="text-lg font-semibold leading-tight sm:text-xl">
-                Project Argos — Warehouse Optimizer
+                Projeto Argos — Otimizador de Armazém
               </h1>
             </div>
           </div>
           <div className="hidden items-center gap-6 md:flex">
-            <StatusPill label="System" value="Online" tone="teal" />
-            <StatusPill label="Operator" value="Bay Crane · 02" tone="ghost" />
-            <StatusPill label="Shift" value="A · 06:00–14:00" tone="ghost" />
+            <StatusPill label="Sistema" value="Online" tone="teal" />
+            <StatusPill label="Operador" value="Guindaste · 02" tone="ghost" />
+            <StatusPill label="Turno" value="A · 06:00–14:00" tone="ghost" />
           </div>
         </div>
       </header>
