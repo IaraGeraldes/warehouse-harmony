@@ -608,7 +608,7 @@ function FloorRow({
   const isHeavy = floor.floor <= 3;
 
   const accent = isIMO ? "var(--danger)" : isHeavy ? "var(--primary)" : "var(--teal)";
-  const label = isIMO ? "IMO / Dangerous Goods" : isHeavy ? "Heavy Load Zone (Base)" : "Standard Zone";
+  const label = isIMO ? "IMO / Carga Perigosa" : isHeavy ? "Zona de Carga Pesada (Base)" : "Zona Padrão";
 
   return (
     <div
