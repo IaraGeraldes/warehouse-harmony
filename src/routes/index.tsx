@@ -362,9 +362,9 @@ function ArgosDashboard() {
                 >
                   <TargetIcon />
                 </div>
-                <p className="text-sm font-medium text-foreground">Awaiting calculation</p>
+                <p className="text-sm font-medium text-foreground">Aguardando cálculo</p>
                 <p className="mt-1 max-w-xs text-xs text-muted-foreground">
-                  Submit a container profile to receive an optimal floor and position.
+                  Envie um perfil de contêiner para receber o andar e a posição ideais.
                 </p>
               </div>
             ) : (
