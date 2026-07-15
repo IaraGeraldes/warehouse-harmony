@@ -371,15 +371,15 @@ function ArgosDashboard() {
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-3">
                   <MetricBlock
-                    label="Recommended Floor"
+                    label="Andar Recomendado"
                     value={`0${recommendation.floor}`.slice(-2)}
-                    hint={`of 07`}
+                    hint={`de 07`}
                     tone="navy"
                   />
                   <MetricBlock
-                    label="Position"
-                    value={recommendation.position}
-                    hint={recommendation.position === "Front" ? "Fast access" : "Long stay"}
+                    label="Posição"
+                    value={recommendation.position === "Front" ? "Frente" : "Fundo"}
+                    hint={recommendation.position === "Front" ? "Acesso rápido" : "Longa permanência"}
                     tone="teal"
                   />
                 </div>
