@@ -658,7 +658,7 @@ function FloorRow({
                     color: isIMO ? "var(--danger-foreground)" : "var(--primary-foreground)",
                   }}
                 >
-                  Recommended
+                  Recomendado
                 </span>
               )}
             </div>
