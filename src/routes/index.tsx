@@ -518,7 +518,7 @@ function ArgosDashboard() {
                 {/* Ground */}
                 <div className="mt-1 flex items-center gap-3 border-t border-dashed border-border pt-3 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
                   <span className="h-1 flex-1 rounded-full" style={{ background: "var(--grid-line)" }} />
-                  Loading Bay · Ground
+                  Doca de Carga · Térreo
                   <span className="h-1 flex-1 rounded-full" style={{ background: "var(--grid-line)" }} />
                 </div>
               </div>
