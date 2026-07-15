@@ -394,7 +394,7 @@ function ArgosDashboard() {
                     onClick={() => setRecommendation(null)}
                     className="flex-1 rounded-md border border-input bg-background px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-accent"
                   >
-                    Dismiss
+                    Descartar
                   </button>
                   <button
                     type="button"
@@ -402,7 +402,7 @@ function ArgosDashboard() {
                     className="flex-[2] rounded-md px-3 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:brightness-110"
                     style={{ background: "var(--gradient-teal)", color: "var(--teal-foreground)" }}
                   >
-                    ✓ Confirm allocation
+                    ✓ Confirmar alocação
                   </button>
                 </div>
               </div>
