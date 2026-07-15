@@ -304,11 +304,11 @@ function ArgosDashboard() {
               >
                 {loading ? (
                   <>
-                    <Spinner /> Calculating…
+                    <Spinner /> Calculando…
                   </>
                 ) : (
                   <>
-                    <BoltIcon /> Calculate Smart Allocation
+                    <BoltIcon /> Calcular Alocação Inteligente
                   </>
                 )}
               </button>
