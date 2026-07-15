@@ -118,7 +118,7 @@ function ArgosDashboard() {
       setHighlightFloor(floorNum);
     } catch (err) {
       console.error(err);
-      setError("Could not reach the allocation service. Please retry.");
+      setError("Não foi possível acessar o serviço de alocação. Tente novamente.");
     } finally {
       setLoading(false);
     }
@@ -172,14 +172,14 @@ function ArgosDashboard() {
                 Wilson Sons · Digital Twin
               </div>
               <h1 className="text-lg font-semibold leading-tight sm:text-xl">
-                Project Argos — Warehouse Optimizer
+                Projeto Argos — Otimizador de Armazém
               </h1>
             </div>
           </div>
           <div className="hidden items-center gap-6 md:flex">
-            <StatusPill label="System" value="Online" tone="teal" />
-            <StatusPill label="Operator" value="Bay Crane · 02" tone="ghost" />
-            <StatusPill label="Shift" value="A · 06:00–14:00" tone="ghost" />
+            <StatusPill label="Sistema" value="Online" tone="teal" />
+            <StatusPill label="Operador" value="Guindaste · 02" tone="ghost" />
+            <StatusPill label="Turno" value="A · 06:00–14:00" tone="ghost" />
           </div>
         </div>
       </header>
@@ -190,33 +190,33 @@ function ArgosDashboard() {
           <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold">Container Allocation</h2>
+                <h2 className="text-base font-semibold">Alocação de Contêiner</h2>
                 <p className="text-xs text-muted-foreground">
-                  Fill in the container profile to compute the optimal slot.
+                  Preencha o perfil do contêiner para calcular a vaga ideal.
                 </p>
               </div>
               <span
                 className="rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider"
                 style={{ background: "var(--secondary)", color: "var(--secondary-foreground)" }}
               >
-                Step 1
+                Etapa 1
               </span>
             </div>
 
             <form onSubmit={handleCalculate} className="space-y-4">
-              <Field label="Container Description">
+              <Field label="Descrição do Contêiner">
                 <input
                   type="text"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  placeholder="e.g. Refrigerated cargo — 40ft HC"
+                  placeholder="ex.: Carga refrigerada — 40ft HC"
                   className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none transition focus:border-[color:var(--ring)] focus:ring-2 focus:ring-[color:var(--ring)]/25"
                   required
                 />
               </Field>
 
               <div className="grid grid-cols-2 gap-3">
-                <Field label="Weight (tons)">
+                <Field label="Peso (toneladas)">
                   <div className="relative">
                     <input
                       type="number"
@@ -245,12 +245,12 @@ function ArgosDashboard() {
                       }}
                     >
                       <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: "var(--warning)" }} />
-                      Over 24t — heavy-load zone required (Floors 1–3).
+                      Acima de 24t — zona de carga pesada necessária (Andares 1–3).
                     </div>
                   )}
                 </Field>
 
-                <Field label="Estimated Stay (months)">
+                <Field label="Permanência estimada (meses)">
                   <input
                     type="number"
                     min={0}
@@ -264,7 +264,7 @@ function ArgosDashboard() {
                 </Field>
               </div>
 
-              <Field label="Dangerous Goods / IMO">
+              <Field label="Carga Perigosa / IMO">
                 <div className="grid grid-cols-2 gap-2 rounded-md border border-input bg-background p-1">
                   {(["No", "Yes"] as const).map((opt) => {
                     const active = imo === opt;
@@ -289,7 +289,7 @@ function ArgosDashboard() {
                             : undefined
                         }
                       >
-                        {opt === "Yes" ? "Yes · IMO" : "No"}
+                        {opt === "Yes" ? "Sim · IMO" : "Não"}
                       </button>
                     );
                   })}
@@ -304,11 +304,11 @@ function ArgosDashboard() {
               >
                 {loading ? (
                   <>
-                    <Spinner /> Calculating…
+                    <Spinner /> Calculando…
                   </>
                 ) : (
                   <>
-                    <BoltIcon /> Calculate Smart Allocation
+                    <BoltIcon /> Calcular Alocação Inteligente
                   </>
                 )}
               </button>
@@ -338,9 +338,9 @@ function ArgosDashboard() {
           >
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold">Recommended Location</h2>
+                <h2 className="text-base font-semibold">Localização Recomendada</h2>
                 <p className="text-xs text-muted-foreground">
-                  Output from the Argos allocation engine.
+                  Resultado do motor de alocação Argos.
                 </p>
               </div>
               <span
@@ -350,7 +350,7 @@ function ArgosDashboard() {
                   color: recommendation ? "var(--teal-foreground)" : "var(--secondary-foreground)",
                 }}
               >
-                Step 2
+                Etapa 2
               </span>
             </div>
 
@@ -362,24 +362,24 @@ function ArgosDashboard() {
                 >
                   <TargetIcon />
                 </div>
-                <p className="text-sm font-medium text-foreground">Awaiting calculation</p>
+                <p className="text-sm font-medium text-foreground">Aguardando cálculo</p>
                 <p className="mt-1 max-w-xs text-xs text-muted-foreground">
-                  Submit a container profile to receive an optimal floor and position.
+                  Envie um perfil de contêiner para receber o andar e a posição ideais.
                 </p>
               </div>
             ) : (
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-3">
                   <MetricBlock
-                    label="Recommended Floor"
+                    label="Andar Recomendado"
                     value={`0${recommendation.floor}`.slice(-2)}
-                    hint={`of 07`}
+                    hint={`de 07`}
                     tone="navy"
                   />
                   <MetricBlock
-                    label="Position"
-                    value={recommendation.position}
-                    hint={recommendation.position === "Front" ? "Fast access" : "Long stay"}
+                    label="Posição"
+                    value={recommendation.position === "Front" ? "Frente" : "Fundo"}
+                    hint={recommendation.position === "Front" ? "Acesso rápido" : "Longa permanência"}
                     tone="teal"
                   />
                 </div>
@@ -394,7 +394,7 @@ function ArgosDashboard() {
                     onClick={() => setRecommendation(null)}
                     className="flex-1 rounded-md border border-input bg-background px-3 py-2.5 text-sm font-medium text-foreground transition hover:bg-accent"
                   >
-                    Dismiss
+                    Descartar
                   </button>
                   <button
                     type="button"
@@ -402,7 +402,7 @@ function ArgosDashboard() {
                     className="flex-[2] rounded-md px-3 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:brightness-110"
                     style={{ background: "var(--gradient-teal)", color: "var(--teal-foreground)" }}
                   >
-                    ✓ Confirm allocation
+                    ✓ Confirmar alocação
                   </button>
                 </div>
               </div>
@@ -422,11 +422,11 @@ function ArgosDashboard() {
               }}
             >
               <div className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-70">
-                Total Occupancy Rate
+                Taxa de Ocupação Total
               </div>
               <div className="mt-2 flex items-end gap-2">
                 <span className="text-4xl font-bold leading-none tracking-tight">{totalOccupancy}%</span>
-                <span className="mb-1 text-xs opacity-70">across 7 floors</span>
+                <span className="mb-1 text-xs opacity-70">em 7 andares</span>
               </div>
               <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
                 <div
@@ -465,17 +465,17 @@ function ArgosDashboard() {
                 </span>
                 <div>
                   <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                    Operational Status
+                    Status Operacional
                   </div>
                   <div className="text-lg font-bold tracking-tight text-foreground">
-                    {fullOperation ? "FULL OPERATION" : "RESTRICTED TO FLOORS 1–4"}
+                    {fullOperation ? "OPERAÇÃO PLENA" : "RESTRITO AOS ANDARES 1–4"}
                   </div>
                 </div>
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 {fullOperation
-                  ? "Occupancy above 40%. All floors available under standard safety rules."
-                  : "Occupancy below 40%. Upper floors (5–7) locked for structural balance; IMO zone (Floor 7) always exclusive."}
+                  ? "Ocupação acima de 40%. Todos os andares disponíveis sob regras padrão de segurança."
+                  : "Ocupação abaixo de 40%. Andares superiores (5–7) bloqueados para equilíbrio estrutural; zona IMO (Andar 7) sempre exclusiva."}
               </p>
             </div>
           </div>
@@ -484,15 +484,15 @@ function ArgosDashboard() {
           <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold">Digital Twin · Warehouse Stack</h2>
+                <h2 className="text-base font-semibold">Digital Twin · Pilha do Armazém</h2>
                 <p className="text-xs text-muted-foreground">
-                  Live view of 7 vertical floors · Front row is closest to the loading bay.
+                  Visão ao vivo dos 7 andares verticais · Fileira da frente é a mais próxima da doca.
                 </p>
               </div>
               <div className="flex items-center gap-3 text-[11px]">
-                <LegendDot color="var(--danger)" label="IMO zone" />
-                <LegendDot color="var(--primary)" label="Heavy load" />
-                <LegendDot color="var(--teal)" label="Standard" />
+                <LegendDot color="var(--danger)" label="Zona IMO" />
+                <LegendDot color="var(--primary)" label="Carga pesada" />
+                <LegendDot color="var(--teal)" label="Padrão" />
               </div>
             </div>
 
@@ -518,7 +518,7 @@ function ArgosDashboard() {
                 {/* Ground */}
                 <div className="mt-1 flex items-center gap-3 border-t border-dashed border-border pt-3 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
                   <span className="h-1 flex-1 rounded-full" style={{ background: "var(--grid-line)" }} />
-                  Loading Bay · Ground
+                  Doca de Carga · Térreo
                   <span className="h-1 flex-1 rounded-full" style={{ background: "var(--grid-line)" }} />
                 </div>
               </div>
@@ -608,7 +608,7 @@ function FloorRow({
   const isHeavy = floor.floor <= 3;
 
   const accent = isIMO ? "var(--danger)" : isHeavy ? "var(--primary)" : "var(--teal)";
-  const label = isIMO ? "IMO / Dangerous Goods" : isHeavy ? "Heavy Load Zone (Base)" : "Standard Zone";
+  const label = isIMO ? "IMO / Carga Perigosa" : isHeavy ? "Zona de Carga Pesada (Base)" : "Zona Padrão";
 
   return (
     <div
@@ -634,7 +634,7 @@ function FloorRow({
           style={{ background: "color-mix(in oklab, var(--navy) 6%, transparent)" }}
         >
           <div className="text-[9px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Floor
+            Andar
           </div>
           <div className="text-2xl font-bold leading-none tracking-tight text-foreground">
             {floor.floor.toString().padStart(2, "0")}
@@ -658,7 +658,7 @@ function FloorRow({
                     color: isIMO ? "var(--danger-foreground)" : "var(--primary-foreground)",
                   }}
                 >
-                  Recommended
+                  Recomendado
                 </span>
               )}
             </div>
@@ -681,13 +681,13 @@ function FloorRow({
           {/* Container slots — front / back */}
           <div className="mt-3 grid grid-cols-2 gap-2">
             <SlotRow
-              title="Front"
+              title="Frente"
               containers={floor.containers.filter((c) => c.front)}
               accent={accent}
               highlighted={highlighted && recommendationPosition === "Front"}
             />
             <SlotRow
-              title="Back"
+              title="Fundo"
               containers={floor.containers.filter((c) => !c.front)}
               accent={accent}
               highlighted={highlighted && recommendationPosition === "Back"}
@@ -725,13 +725,13 @@ function SlotRow({
           {title}
         </span>
         <span className="text-[10px] tabular-nums text-muted-foreground">
-          {containers.length} unit{containers.length === 1 ? "" : "s"}
+          {containers.length} unidade{containers.length === 1 ? "" : "s"}
         </span>
       </div>
       <div className="flex flex-wrap gap-1">
         {containers.length === 0 && (
           <span className="rounded border border-dashed border-border px-1.5 py-0.5 text-[10px] text-muted-foreground">
-            empty
+            vazio
           </span>
         )}
         {containers.map((c) => (
