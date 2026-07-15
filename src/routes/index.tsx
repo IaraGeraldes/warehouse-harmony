@@ -634,7 +634,7 @@ function FloorRow({
           style={{ background: "color-mix(in oklab, var(--navy) 6%, transparent)" }}
         >
           <div className="text-[9px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Floor
+            Andar
           </div>
           <div className="text-2xl font-bold leading-none tracking-tight text-foreground">
             {floor.floor.toString().padStart(2, "0")}
