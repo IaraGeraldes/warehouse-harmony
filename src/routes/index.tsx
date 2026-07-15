@@ -289,7 +289,7 @@ function ArgosDashboard() {
                             : undefined
                         }
                       >
-                        {opt === "Yes" ? "Yes · IMO" : "No"}
+                        {opt === "Yes" ? "Sim · IMO" : "Não"}
                       </button>
                     );
                   })}
