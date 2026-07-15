@@ -190,16 +190,16 @@ function ArgosDashboard() {
           <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold">Container Allocation</h2>
+                <h2 className="text-base font-semibold">Alocação de Contêiner</h2>
                 <p className="text-xs text-muted-foreground">
-                  Fill in the container profile to compute the optimal slot.
+                  Preencha o perfil do contêiner para calcular a vaga ideal.
                 </p>
               </div>
               <span
                 className="rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider"
                 style={{ background: "var(--secondary)", color: "var(--secondary-foreground)" }}
               >
-                Step 1
+                Etapa 1
               </span>
             </div>
 
