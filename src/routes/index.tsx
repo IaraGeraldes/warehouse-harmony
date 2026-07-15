@@ -264,7 +264,7 @@ function ArgosDashboard() {
                 </Field>
               </div>
 
-              <Field label="Dangerous Goods / IMO">
+              <Field label="Carga Perigosa / IMO">
                 <div className="grid grid-cols-2 gap-2 rounded-md border border-input bg-background p-1">
                   {(["No", "Yes"] as const).map((opt) => {
                     const active = imo === opt;
