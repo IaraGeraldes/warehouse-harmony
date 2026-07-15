@@ -422,11 +422,11 @@ function ArgosDashboard() {
               }}
             >
               <div className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-70">
-                Total Occupancy Rate
+                Taxa de Ocupação Total
               </div>
               <div className="mt-2 flex items-end gap-2">
                 <span className="text-4xl font-bold leading-none tracking-tight">{totalOccupancy}%</span>
-                <span className="mb-1 text-xs opacity-70">across 7 floors</span>
+                <span className="mb-1 text-xs opacity-70">em 7 andares</span>
               </div>
               <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
                 <div
