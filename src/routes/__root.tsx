@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { lang: "pt-BR" },
+      { name: "language", content: "pt-BR" },
       { title: "Projeto Argos — Otimizador de Armazém Wilson Sons" },
       {
         name: "description",
