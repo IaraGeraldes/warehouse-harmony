@@ -245,7 +245,7 @@ function ArgosDashboard() {
                       }}
                     >
                       <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: "var(--warning)" }} />
-                      Over 24t — heavy-load zone required (Floors 1–3).
+                      Acima de 24t — zona de carga pesada necessária (Andares 1–3).
                     </div>
                   )}
                 </Field>
