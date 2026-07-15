@@ -338,9 +338,9 @@ function ArgosDashboard() {
           >
             <div className="mb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold">Recommended Location</h2>
+                <h2 className="text-base font-semibold">Localização Recomendada</h2>
                 <p className="text-xs text-muted-foreground">
-                  Output from the Argos allocation engine.
+                  Resultado do motor de alocação Argos.
                 </p>
               </div>
               <span
@@ -350,7 +350,7 @@ function ArgosDashboard() {
                   color: recommendation ? "var(--teal-foreground)" : "var(--secondary-foreground)",
                 }}
               >
-                Step 2
+                Etapa 2
               </span>
             </div>
 
