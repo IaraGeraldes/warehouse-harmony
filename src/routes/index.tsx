@@ -465,17 +465,17 @@ function ArgosDashboard() {
                 </span>
                 <div>
                   <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                    Operational Status
+                    Status Operacional
                   </div>
                   <div className="text-lg font-bold tracking-tight text-foreground">
-                    {fullOperation ? "FULL OPERATION" : "RESTRICTED TO FLOORS 1–4"}
+                    {fullOperation ? "OPERAÇÃO PLENA" : "RESTRITO AOS ANDARES 1–4"}
                   </div>
                 </div>
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 {fullOperation
-                  ? "Occupancy above 40%. All floors available under standard safety rules."
-                  : "Occupancy below 40%. Upper floors (5–7) locked for structural balance; IMO zone (Floor 7) always exclusive."}
+                  ? "Ocupação acima de 40%. Todos os andares disponíveis sob regras padrão de segurança."
+                  : "Ocupação abaixo de 40%. Andares superiores (5–7) bloqueados para equilíbrio estrutural; zona IMO (Andar 7) sempre exclusiva."}
               </p>
             </div>
           </div>
