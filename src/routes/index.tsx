@@ -204,12 +204,12 @@ function ArgosDashboard() {
             </div>
 
             <form onSubmit={handleCalculate} className="space-y-4">
-              <Field label="Container Description">
+              <Field label="Descrição do Contêiner">
                 <input
                   type="text"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  placeholder="e.g. Refrigerated cargo — 40ft HC"
+                  placeholder="ex.: Carga refrigerada — 40ft HC"
                   className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none transition focus:border-[color:var(--ring)] focus:ring-2 focus:ring-[color:var(--ring)]/25"
                   required
                 />
