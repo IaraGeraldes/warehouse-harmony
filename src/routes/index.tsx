@@ -216,7 +216,7 @@ function ArgosDashboard() {
               </Field>
 
               <div className="grid grid-cols-2 gap-3">
-                <Field label="Weight (tons)">
+                <Field label="Peso (toneladas)">
                   <div className="relative">
                     <input
                       type="number"
