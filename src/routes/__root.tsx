@@ -77,18 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Project Argos — Wilson Sons Warehouse Optimizer" },
+      { lang: "pt-BR" },
+      { title: "Projeto Argos — Otimizador de Armazém Wilson Sons" },
       {
         name: "description",
         content:
-          "Digital Twin dashboard for Wilson Sons' 7-floor warehouse: smart container allocation, occupancy monitoring, and IMO safety zoning.",
+          "Painel Digital Twin do armazém de 7 andares da Wilson Sons: alocação inteligente de contêineres, monitoramento de ocupação e zoneamento de segurança IMO.",
       },
       { name: "author", content: "Wilson Sons" },
-      { property: "og:title", content: "Project Argos — Warehouse Optimizer" },
+      { property: "og:title", content: "Projeto Argos — Otimizador de Armazém" },
       {
         property: "og:description",
         content:
-          "Digital Twin dashboard for Wilson Sons' 7-floor warehouse: smart container allocation, occupancy monitoring, and IMO safety zoning.",
+          "Painel Digital Twin do armazém de 7 andares da Wilson Sons: alocação inteligente de contêineres, monitoramento de ocupação e zoneamento de segurança IMO.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
