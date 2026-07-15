@@ -725,13 +725,13 @@ function SlotRow({
           {title}
         </span>
         <span className="text-[10px] tabular-nums text-muted-foreground">
-          {containers.length} unit{containers.length === 1 ? "" : "s"}
+          {containers.length} unidade{containers.length === 1 ? "" : "s"}
         </span>
       </div>
       <div className="flex flex-wrap gap-1">
         {containers.length === 0 && (
           <span className="rounded border border-dashed border-border px-1.5 py-0.5 text-[10px] text-muted-foreground">
-            empty
+            vazio
           </span>
         )}
         {containers.map((c) => (
