@@ -250,7 +250,7 @@ function ArgosDashboard() {
                   )}
                 </Field>
 
-                <Field label="Estimated Stay (months)">
+                <Field label="Permanência estimada (meses)">
                   <input
                     type="number"
                     min={0}
